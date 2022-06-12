@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sen:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./build/output.css" />
+        <title>Travel Agency</title>
+    </head>
+    <body>
+        <div class="max-w-[1440px] mx-auto">
+            <!-- Hero -->
+            <section id="hero" class="bg-hero pb-[100px]">
+                <div class="layout-container px-20 md:px-0">
+                    <!-- Header Menu -->
+                    <header class="pt-[36px] flex items-center justify-between">
+                        <div class="flex">
+                            <a href="index.html" class="font-sen text-[24px]"
+                                >Outing<span class="text-redPrimary">.</span></a
+                            >
+                            <form
+                                class="relative rounded-full w-[288px] h-[50px] pl-[20px] py-[10px] ml-[20px] focus:shadow-[0_3px_4px_rgba(0, 0, 0, 0.15);] border-[#B8AEAE] border-[1px]"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search for destinations..."
+                                    class="absolute max-w-[174px] text-[14px] outline-0 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] px-[4px] py-[5px]"
+                                />
+                                <i
+                                    class="fa-solid fa-magnifying-glass absolute top-[50%] translate-y-[-50%] text-[18px] text-redPrimary"
+                                ></i>
+                            </form>
+
+                            <button
+                                id="menu-btn"
+                                class="block hamburger md:hidden focus:outline-none"
+                            >
+                                <span class="hamburger-top"></span>
+                                <span class="hamburger-middle"></span>
+                                <span class="hamburger-bottom"></span>
+                            </button>
+                        </div>
+
+                        <!-- Mobile Menu -->
+                        <div class="md:hidden">
+                            <div
+                                id="menu"
+                                class="absolute text-grayPrimary flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+                            >
+                                <a href="#">Home</a>
+                                <a href="#">Destinations</a>
+                                <a href="#">Pricing</a>
+                                <a href="#">Reviews</a>
+                                <a href="#">Contact us</a>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:flex items-center gap-x-[46px]">
+                            <ul class="flex items-center gap-x-[46px]">
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="text-redPrimary font-bold"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="text-grayPrimary"
+                                        >Destinations</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="text-grayPrimary"
+                                        >Pricing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="text-grayPrimary"
+                                        >Reviews</a
+                                    >
+                                </li>
+                            </ul>
+                            <button
+                                class="rounded-full w-[144px] h-[49px] bg-redPrimary text-white px-[24px] py-[10px]"
+                            >
+                                Contact us
+                            </button>
+                        </div>
+                    </header>
+                    <!-- Content -->
+                    <div
+                        class="flex flex-col-reverse gap-[130px] pt-[65px] flex-wrap md:flex-row"
+                    >
+                        <!-- Photos -->
+                        <div class="flex gap-[30px] flex-1">
+                            <div>
+                                <img
+                                    src="./img/hero/heroLeftTop.png"
+                                    alt=""
+                                    class="pb-[30px]"
+                                />
+                                <img
+                                    src="./img/hero/heroLeftBottom.png"
+                                    alt=""
+                                />
+                            </div>
+                            <img
+                                src="./img/hero/heroRight.png"
+                                alt=""
+                                class="pt-[80px]"
+                            />
+                        </div>
+
+                        <!-- Title -->
+                        <div class="flex-1">
+                            <h1
+                                class="font-sen text-[64px] mb-[18px] leading-normal"
+                            >
+                                The perfect partner of your best trip.
+                            </h1>
+                            <p class="text-[18px] text-grayPrimary mb-[38px]">
+                                Make your travel more enjoyable with us. We are
+                                the best travel agency and we are providing the
+                                best travel services for our clients.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button
+                                    class="rounded-full w-[144px] h-[49px] bg-redPrimary text-white px-[24px] py-[10px]"
+                                >
+                                    Plan a Trip
+                                </button>
+                                <div
+                                    class="flex items-center gap-[30px] h-[80px]"
+                                >
+                                    <div class="relative">
+                                        <img
+                                            src="./img/hero/heroAvt.png"
+                                            alt=""
+                                            class="w-[80px] h-[80px] rounded-[50%]"
+                                        />
+                                        <div
+                                            class="w-[40px] h-[40px] rounded-[50%] bg-white shadow-lg absolute top-[50%] right-[-20px] translate-y-[-50%] flex items-center justify-center"
+                                        >
+                                            <i
+                                                class="fa-solid fa-caret-right"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="font-semibold">
+                                        Watch our Story
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="destination">
+                <div class="layout-container my-[170px] px-20 md:px-0">
+                    <h1 class="font-sen text-[44px]">
+                        Explore top destinations
+                    </h1>
+                    <p class="w-[507px] mt-[16px] mb-[55px]">
+                        Explore your suitable and dream places around the world.
+                        Here you can find your right destination.
+                    </p>
+                    <!-- image -->
+                    <div
+                        class="flex flex-col-reverse gap-[30px] items-center justify-between md:flex-row"
+                    >
+                        <div
+                            class="h-[422px] rounded-[20px] shadow-lg relative"
+                        >
+                            <img
+                                src="./img/destination/des1.png"
+                                alt=""
+                                class="w-[370px] h-[211px] rounded-t-[20px]"
+                            />
+                            <div class="mt-[24px] px-[24px] absolute">
+                                <h3 class="font-sen text-[24px]">Mountain</h3>
+                                <p class="text-[14px] mt-[14px] mb-[10px]">
+                                    It is one of the amazing place to trip and
+                                    you will enjoy most to travelling there.
+                                    Such beautiful place.
+                                </p>
+                                <a
+                                    href="#"
+                                    class="text-[14px] font-semibold text-redPrimary"
+                                    >Learn more</a
+                                >
+                            </div>
+                        </div>
+
+                        <img
+                            src="./img/destination/des2.png"
+                            alt=""
+                            class="w-[370px] h-[422px] rounded-[20px] shadow-lg"
+                        />
+
+                        <img
+                            src="./img/destination/des3.png"
+                            alt=""
+                            class="w-[370px] h-[422px] rounded-[20px] shadow-lg"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section id="package">
+                <div
+                    class="layout-container my-[170px] flex flex-col items-center px-20 md:px-0"
+                >
+                    <h1 class="font-sen text-[44px]">Best trip package</h1>
+                    <p class="w-[507px] mt-[16px] mb-[55px] text-center">
+                        Explore your suitable and dream places around the world.
+                        Here you can find your right destination.
+                    </p>
+                    <!-- image -->
+                    <div
+                        class="flex flex-col-reverse gap-[30px] items-center justify-between md:flex-row"
+                    >
+                        <div
+                            class="h-[356px] w-[270px] rounded-[14px] shadow-lg"
+                        >
+                            <div class="relative">
+                                <img
+                                    src="./img/package/pack2.png"
+                                    alt=""
+                                    class="w-[356px] h-[222px] rounded-t-[14px]"
+                                />
+                                <div
+                                    class="bg-redPrimary text-center pt-[21px] font-semibold text-[18px] text-white w-[100px] h-[72px] rounded-tl-[14px] absolute right-0 translate-y-[-100%]"
+                                >
+                                    $340
+                                </div>
+                            </div>
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    Floating city
+                                </h3>
+                                <p
+                                    class="text-[14px] mt-[6px] text-grayPrimary"
+                                >
+                                    Enjoy the floating city in Serbia. That’s an
+                                    amazing place.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="h-[356px] w-[270px] rounded-[14px] shadow-lg"
+                        >
+                            <div class="relative">
+                                <img
+                                    src="./img/package/pack1.png"
+                                    alt=""
+                                    class="w-[356px] h-[222px] rounded-t-[14px]"
+                                />
+                                <div
+                                    class="bg-white text-center pt-[21px] font-semibold text-[18px] text-redPrimary w-[100px] h-[72px] rounded-tl-[14px] absolute right-0 translate-y-[-100%]"
+                                >
+                                    $250
+                                </div>
+                            </div>
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">Mountain</h3>
+                                <p
+                                    class="text-[14px] mt-[6px] text-grayPrimary"
+                                >
+                                    Enjoy the mountain of zurich. That is so
+                                    amazing for trip.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="h-[356px] w-[270px] rounded-[14px] shadow-lg"
+                        >
+                            <div class="relative">
+                                <img
+                                    src="./img/package/pack3.png"
+                                    alt=""
+                                    class="w-[356px] h-[222px] rounded-t-[14px]"
+                                />
+                                <div
+                                    class="bg-white text-center pt-[21px] font-semibold text-[18px] text-redPrimary w-[100px] h-[72px] rounded-tl-[14px] absolute right-0 translate-y-[-100%]"
+                                >
+                                    $150
+                                </div>
+                            </div>
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    The village
+                                </h3>
+                                <p
+                                    class="text-[14px] mt-[6px] text-grayPrimary"
+                                >
+                                    The village is a city you will feel you are
+                                    in a village.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="h-[356px] w-[270px] rounded-[14px] shadow-lg"
+                        >
+                            <div class="relative">
+                                <img
+                                    src="./img/package/pack4.png"
+                                    alt=""
+                                    class="w-[356px] h-[222px] rounded-t-[14px]"
+                                />
+                                <div
+                                    class="bg-white text-center pt-[21px] font-semibold text-[18px] text-redPrimary w-[100px] h-[72px] rounded-tl-[14px] absolute right-0 translate-y-[-100%]"
+                                >
+                                    $750
+                                </div>
+                            </div>
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    The red house
+                                </h3>
+                                <p
+                                    class="text-[14px] mt-[6px] text-grayPrimary"
+                                >
+                                    The red house is the great place for anyone
+                                    to visit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <button
+                        class="rounded-full w-[180px] h-[64px] bg-redPrimary text-[18px] text-white px-[54px] py-[17px] mt-[38px]"
+                    >
+                        View All
+                    </button>
+                </div>
+            </section>
+
+            <section id="cta">
+                <div
+                    class="layout-container my-[170px] flex flex-col items-center px-20 md:px-0"
+                >
+                    <h1 class="font-sen text-[44px]">Start your trip now!</h1>
+                    <p class="w-[507px] mt-[16px] mb-[55px] text-center">
+                        Explore your suitable and dream places around the world.
+                        Here you can find your right destination.
+                    </p>
+                    <!-- video -->
+                    <iframe
+                        width="500px"
+                        height="250"
+                        src="https://www.youtube.com/embed/EILvAJEqrCA"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        class="rounded-[20px] md:w-[1170px] md:h-[556px]"
+                    ></iframe>
+                    <form
+                        action="#"
+                        class="mt-[55px] flex items-center flex-col"
+                    >
+                        <div class="w-[370px] relative mb-[38px]">
+                            <h2
+                                class="text-[18px] text-grayPrimary text-center"
+                            >
+                                Enter your email to join
+                            </h2>
+                            <input
+                                id="email"
+                                type="email"
+                                class="border-0 border-b-2 border-redPrimary outline-none absolute w-[100%] py-[5px] px-[25px]"
+                                required
+                            />
+                        </div>
+
+                        <!-- button -->
+                        <button
+                            type="submit"
+                            class="rounded-full w-[180px] h-[64px] bg-redPrimary text-[18px] text-white px-[16px] py-[10px] mt-[38px]"
+                        >
+                            Get Listed
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="blog">
+                <div class="layout-container my-[170px] px-20 md:px-0">
+                    <div
+                        class="mb-[55px] flex flex-col items-start md:items-center md:justify-between md:flex-row"
+                    >
+                        <div class="">
+                            <h1 class="font-sen text-[44px]">Our blog</h1>
+                            <p
+                                class="w-[339px] mb-[24px] mt-[16px] text-grayPrimary"
+                            >
+                                Read our regular travel blog and know the latest
+                                update of tour and travel
+                            </p>
+                        </div>
+                        <a
+                            href="#"
+                            class="text-[18px] text-redPrimary font-semibold"
+                            >Read All Blog</a
+                        >
+                    </div>
+                    <!-- image -->
+                    <div
+                        class="flex flex-col gap-[30px] items-center justify-between md:flex-row"
+                    >
+                        <div
+                            class="h-[422px] w-[370px] rounded-[14px] shadow-lg"
+                        >
+                            <img
+                                src="./img/package/pack2.png"
+                                alt=""
+                                class="h-[250px] rounded-t-[14px] w-[100%]"
+                            />
+
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    The proper guidelines of going the red house
+                                </h3>
+                                <div
+                                    class="flex items-center gap-[16px] mt-[24px]"
+                                >
+                                    <img
+                                        src="./img/blog/avt1.png"
+                                        alt=""
+                                        class="w-[42px] h-[42px] rounded-[50%]"
+                                    />
+                                    <span>Ben Stokes</span>
+                                    <a
+                                        href="#"
+                                        class="text-[14px] font-semibold text-redPrimary ml-[55px]"
+                                        >Read More</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="h-[422px] w-[370px] rounded-[14px] shadow-lg"
+                        >
+                            <img
+                                src="./img/blog/pack3.png"
+                                alt=""
+                                class="h-[250px] rounded-t-[14px] w-[100%]"
+                            />
+
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    The proper guidelines of going the red house
+                                </h3>
+                                <div
+                                    class="flex items-center gap-[16px] mt-[24px]"
+                                >
+                                    <img
+                                        src="./img/blog/avt2.png"
+                                        alt=""
+                                        class="w-[42px] h-[42px] rounded-[50%]"
+                                    />
+                                    <span>Ben Stokes</span>
+                                    <a
+                                        href="#"
+                                        class="text-[14px] font-semibold text-redPrimary ml-[55px]"
+                                        >Read More</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="h-[422px] w-[370px] rounded-[14px] shadow-lg"
+                        >
+                            <img
+                                src="./img/blog/pack4.png"
+                                alt=""
+                                class="h-[250px] rounded-t-[14px] w-[100%]"
+                            />
+
+                            <div class="mt-[22px] px-[16px]">
+                                <h3 class="font-sen text-[22px]">
+                                    The proper guidelines of going the red house
+                                </h3>
+                                <div
+                                    class="flex items-center gap-[16px] mt-[24px]"
+                                >
+                                    <img
+                                        src="./img/blog/avt3.png"
+                                        alt=""
+                                        class="w-[42px] h-[42px] rounded-[50%]"
+                                    />
+                                    <span>Ben Stokes</span>
+                                    <a
+                                        href="#"
+                                        class="text-[14px] font-semibold text-redPrimary ml-[55px]"
+                                        >Read More</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-brown pb-[100px] text-graySecondary">
+                <div
+                    class="layout-container pt-[96px] gap-[50px] flex items-start justify-between md:flex-row px-20 md:px-0"
+                >
+                    <div class="">
+                        <h1 class="text-white font-sen text-[24px]">
+                            Outing<span class="text-redPrimary">.</span>
+                        </h1>
+                        <h2 class="mt-[10px] mb-[20px] text-[14px] w-[166px]">
+                            &copy; 2022 webdesign.gdn All Rights Reserved
+                        </h2>
+                        <ul class="flex gap-[16px]">
+                            <li
+                                class="w-[40px] h-[40px] rounded-[50%] bg-white relative"
+                            >
+                                <i
+                                    class="fa-brands fa-facebook-f text-[#3B599C] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                                ></i>
+                            </li>
+                            <li
+                                class="w-[40px] h-[40px] rounded-[50%] bg-white relative"
+                            >
+                                <i
+                                    class="fa-brands fa-twitter text-[#58A7DE] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                                ></i>
+                            </li>
+                            <li
+                                class="w-[40px] h-[40px] rounded-[50%] bg-white relative"
+                            >
+                                <i
+                                    class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-r from-[#fba756] to-[#d82d7e] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                                ></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden md:flex justify-between gap-[100px]">
+                        <div>
+                            <h1 class="text-white font-semibold">Home</h1>
+                            <ul class="mt-[16px]">
+                                <li class="mt-[8px]">Home</li>
+                                <li class="mt-[8px]">Featured</li>
+                                <li class="mt-[8px]">Service</li>
+                                <li class="mt-[8px]">Feedback</li>
+                                <li class="mt-[8px]">Contact</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h1 class="text-white font-semibold">Company</h1>
+                            <ul class="mt-[16px]">
+                                <li class="mt-[8px]">Service</li>
+                                <li class="mt-[8px]">Contact</li>
+                                <li class="mt-[8px]">Reviews</li>
+                                <li class="mt-[8px]">About</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h1 class="text-white font-semibold">Discover</h1>
+                            <ul class="mt-[16px]">
+                                <li class="mt-[8px]">Terms</li>
+                                <li class="mt-[8px]">Policy</li>
+                                <li class="mt-[8px]">New trips</li>
+                                <li class="mt-[8px]">Trust and Security</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h1 class="text-white font-semibold">Contact</h1>
+                            <ul class="mt-[16px]">
+                                <li class="mt-[8px]">+880 1706499216</li>
+                                <li class="mt-[8px]">hellobesnik@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="mt-[16px] text-white md:hidden">
+                        <li class="mt-[8px]">Home</li>
+                        <li class="mt-[8px]">Company</li>
+                        <li class="mt-[8px]">Discover</li>
+                        <li class="mt-[8px]">Contact</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
